@@ -1,4 +1,4 @@
-# Powershell setup
+# PowerShell setup
 
 Some customizations to my `$profile` file.
 
