@@ -1,6 +1,6 @@
 # Powershell setup
 
-I currently use PowerShell 7 and Windows Terminal, and make a few customizations to my `$profile` file.
+Some customizations to my `$profile` file.
 
 ## Launch the first *.sln file found
 
