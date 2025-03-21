@@ -2,7 +2,7 @@
 
 ## Dev tools
 
-(https://www.nerdfonts.com/)
-(https://www.programmingfonts.org/)
-(https://ohmyposh.dev/)
-(https://github.com/microsoft/terminal)
+[Nerd Fonts](https://www.nerdfonts.com/)
+[Programming Fonts](https://www.programmingfonts.org/)
+[Oh My Posh](https://ohmyposh.dev/)
+[Windows Terminal](https://github.com/microsoft/terminal)
