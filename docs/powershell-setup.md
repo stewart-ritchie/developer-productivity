@@ -2,14 +2,15 @@
 
 Some customizations to my `$profile` file.
 
-## Launch the first *.sln file found
+## Search and launch Solution files (Windows Only)
 
 ```PowerShell
-function Launch-Sln
+function Open-Solution
 {
-    Invoke-Item (Get-ChildItem -r -i *.sln | Select-Object -first 1).Fullname
+    $sln = Get-ChildItem -r -i *.sln, *.slnx | Select-Object -Property FullName | Out-GridView -Title "Select a Solution" -PassThru       
+    Invoke-Item $sln.Fullname
 }
-New-Alias vsgo Launch-Sln
+New-Alias vsgo Open-Solution
 ```
 
 ## Git CLI aliases
@@ -50,7 +51,7 @@ function New-Dotnet-Project([string] $ProjectName, [string] $MainType = 'classli
     # Create solution file
     
     dotnet new gitignore
-    dotnet new sln --output "$workingDirectory" --name "$ProjectName"
+    dotnet new sln --output "$workingDirectory" --name "$ProjectName" --format slnx
 
     # Create main project
 
