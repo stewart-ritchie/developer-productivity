@@ -2,13 +2,22 @@
 
 Some customizations to my `$profile` file.
 
-## Search and launch Solution files (Windows Only)
+## List and launch Solution files
 
 ```PowerShell
-function Open-Solution
-{
-    $sln = Get-ChildItem -r -i *.sln, *.slnx | Select-Object -Property FullName | Out-GridView -Title "Select a Solution" -PassThru       
-    Invoke-Item $sln.Fullname
+function Open-Solution {
+    $files = Get-ChildItem -r -i *.sln, *.slnx -File | Select-Object -Property FullName
+
+    $i = 0
+
+    foreach ($file in $files) {
+        $i++
+        Write-Host "$($i): $($file.FullName)" -ForegroundColor Green
+    }
+
+    $choice = Read-Host "Select solution (1-$i)"
+
+    Invoke-Item $files[$choice - 1].FullName
 }
 New-Alias vsgo Open-Solution
 ```
