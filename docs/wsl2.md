@@ -1,5 +1,7 @@
 All these changes need a `wsl --shutdown` to take...
 
+[Further reading](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)
+
 Add these changes to `/etc/wsl.conf` to prevent wsl searching Windows path for Linux executables.
 
 ```
