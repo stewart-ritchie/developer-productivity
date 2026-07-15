@@ -13,7 +13,7 @@ Confirm path changes...
 echo $PATH | tr ':' '\n'
 ```
 
-On the Windows host, add these changes to `~\\.wslconfig` to limit resources available to wsl (based on 16 processors and 32GB memory on host).
+On the Windows host, add these changes to `~\.wslconfig` to limit resources available to wsl (based on 16 processors and 32GB memory on host).
 
 ```
 [wsl2]
